@@ -1,1 +1,1 @@
-Repo for IES practical classes, divded by labs and sublabs
+Repo for IES practical classes, divided by labs and sublabs
