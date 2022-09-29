@@ -52,6 +52,8 @@ git push -u origin main
     
 In this case we are creating a folder outside our repo, acting as if we are a collaborator on a different computer, and then merging to our project
 
+> as the collaborator we are to create a logging system for our project 'weatherApp', that implementation resides in [lab1.2/weatherApp/src/main/resources/](https://github.com/AnaSL-WRK/IES_104063/tree/main/lab1/lab1.2/weatherApp/src/main/resources) since that's where the project is located
+
 ```
 git clone https://github.com/AnaSL-WRK/IES_104063.git	#in the directory you want to work on
 git add							#add your files
