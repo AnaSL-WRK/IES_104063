@@ -102,5 +102,5 @@ git branch -d future-plans 	#delete the branch since you won't use it anymore
 	
 - **cause:** created a .git  in a subfolder  
 - **solution:** delete the .git folder (may have to activate 'view hidden folders')  
-```git status```   #if you want to check the files 'deleted'  
+```git status```    if you want to check the files 'deleted'  
 ```git restore . ```
