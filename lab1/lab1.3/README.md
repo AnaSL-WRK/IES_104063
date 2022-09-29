@@ -83,16 +83,16 @@ git branch -d future-plans 	#delete the branch since you won't use it anymore
 
 <br>
 
-### Useful commands:
+## Useful commands:
 ```git status```		displays the state of the working directory and the staging area (also what branch you're on)  
 ```git reset HEAD <YOUR-FILE>```to unstage a file (be sure to also write the file extension)  
 ```git reset HEAD . ```		to unstage all files   
 
+<br>
 
-### Errors that happened:
+## Errors that happened:
 
 ```error: failed to push some refs to 'https://github.com/AnaSL-WRK/IES_104063.git'```  
-<br>
 - **solution:** ```git pull --rebase origin main```
 - gets the files from remote repo to local, then just add the project again
 <br>
