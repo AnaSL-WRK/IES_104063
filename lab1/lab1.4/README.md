@@ -31,7 +31,80 @@ What this did:
 
 It is recommended to get familiar with the <ins>Docker Dashboard</ins> since it provides a simple interface that enables you to manage your containers, applications, and images directly from your machine without having to use the CLI to perform core actions.
 
-## Creating a Sample application
+## Downloading and Initializing Portrainer
+
+Although Docker Desktop covers the essentials of a graphical interface for container managment, you can combine this software with [Portrainer](https://www.portainer.io)
+
+You can install it by following this [tutorial](https://docs.portainer.io/start/intro), using the "Docker" deployment option
+
+After installing the Portrainer Server container you can run ```docker ps``` to check if it's running
+
+> To Log in you have to open a web browser and go to ```https://localhost:9443``` (By default, Portainer generates and uses a self-signed SSL certificate to secure port 9443 but if that site can't be reached, be sure to use the port number it was allocated as seen previously)
+
+And you're all set up with Portrainer!
 
 
+## Define your own image (Dockerfile)
+
+We are now trying to develop (and deploy) a project that requires a database server (persistent data)
+For that we are setting up PostgreSQL[^3]
+<br>
+
+ ```docker pull postgres``` will pull down the latest stable release Postgres image from the official Postgres docker hub repository.
+
+[^3]: PostgreSQL is relational database management system, used as the primary data store or data warehouse for many web, mobile, geospatial, and analytics applications
+
+```docker run --name pg-docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=sampledb -e PGDATA=/tmp -d -p 5432:5432 -v C:\Users\anawk\databaseDock:/var/lib/postgresql/data postgres:11``` to run the container (you may map other ports and swap the absolute path to the host location for the database storage
+
+> use ```docker ps``` to check the container and its ports
+<br>
+
+### Connecting and using PostgreSQL
+
+Useful tutorial: [PostgreSQL With Docker – Quick Start](https://dzone.com/articles/postgresql-with-docker-quick-start)
+To run psql inside the container we can use: ```docker exec -it pg-docker psql -U postgres```
+
+To issue SQL commands via docker CLI we can use: ```docker exec -it pg-docker psql -U postgres -c "CREATE DATABASE testdb;"```
+<br>
+<br>
+
+### Docker File 
+
+To build an image we will firstly creat a Docker File[^4]
+
+[^4]: Docker File: a text document that contains all the commands a user could call on the command line to assemble an image.
+
+In the folder Lab1.4 you can find example files that we are going to run
+
+> On the dockerfile notice the **Copy** command which is copying the script files from host directory to container.
+
+> Giving the file names numeric ascending value helps in controlling the execution order.
+
+After having our files we can now build our image:
+```docker image build -t postgresbasic .```
+
+<br>
+
+### Testing the access to the database
+
+Useful tutorial: [How to run PostgreSQL using docker](https://dev.to/shree_j/how-to-install-and-run-psql-using-docker-41j2)
+
+For the test we need a PostgresSQL client
+
+```docker run --rm -p 5050:5050 thajeztah/pgadmin4``` to install PG-Admin using Docker
+
+And you can now manage your postgres from the browser by launching http://localhost:5050 
+
+
+## Multiple services (Docker compose)
+
+More often than not, deployment environments required several interdependent services, mapped
+into different containers. In those cases, it is convenient to define a “graph” of services and
+corresponding containers, using the “Docker composer” tool.
+
+Inside the folder lab1.4/DockerComposeApp you will find an implementation using the Docker Composer tool created by following this [tutorial](https://docs.docker.com/compose/gettingstarted/)
+
+problems:
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount608736373/Dockerfile: no such 
+file or directory:  escrevi .Dockerfile em vez de Dockerfile
 
