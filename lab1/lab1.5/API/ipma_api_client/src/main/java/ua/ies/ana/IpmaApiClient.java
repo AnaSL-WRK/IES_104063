@@ -43,10 +43,12 @@ public class IpmaApiClient {
               
                     for (String local: city){
 
+                        boolean existe = false;
+
                         for (CityForecast match: forecastInfo){
 
                             if(local.equals(match.getLocal())){
-
+                                existe = true;
                                     
                                 Call<IpmaCityForecast> callSync = service.getForecastForACity(match.getGlobalIdLocal());
                                 Response<IpmaCityForecast> apiResponse = callSync.execute();
@@ -54,7 +56,7 @@ public class IpmaApiClient {
 
                                 if (forecast != null) {
                                     CityForecast firstDay = forecast.getData().listIterator().next();
-                                    System.out.printf( " Local: %s \n Dia: %s \n Min temp: %.1f °C \n Max temp: %.1f °C \n Prob. Precipitaçao: %.1f \n",
+                                    System.out.printf( " \n Local: %s \n Dia: %s \n Min temp: %.1f °C \n Max temp: %.1f °C \n Prob. Precipitaçao: %.1f \n",
                                         match.getLocal(),
                                         firstDay.getForecastDate(),
                                         Double.parseDouble(firstDay.getTMin()),
@@ -63,87 +65,19 @@ public class IpmaApiClient {
 
                                 else {
                                     System.out.println( "No forecast data for this city");}
-                                    
                             }
-                        }
-                    }
+                        } 
 
-            }catch (Exception ex) {
+                    
+                    if(existe == false){
+                        System.out.println( "This city doesnt exist in our data base");
+                        existe = true;}
+                            
+                    }
+                }
+            catch (Exception ex) {
                 ex.printStackTrace();}
             
-        }
+        
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // static int ID = (Integer) null;
-      // static String DATE = null;
-      // static Double TMIN = null;
-      // static Double TMAX = null;
-      // static Double PPROB = null;
- 
-
-  // try{
-  //     Response<IpmaCityForecast> apiResponse = callSync.execute();
-  //     IpmaCityForecast forecast = apiResponse.body();
-
-  //     if (forecast != null) {
-  //         CityForecast firstDay = forecast.getData().listIterator().next();
-  //         var ID = forecast.getGlobalIdLocal();
-  //         String DATE = firstDay.getForecastDate();
-  //         double TMIN = Double.parseDouble(firstDay.getTMin());
-  //         double TMAX = Double.parseDouble(firstDay.getTMax());
-  //         double PPROB = Double.parseDouble(firstDay.getPrecipitaProb());}
-
-  //          
-  //     }
-  //     catch (Exception ex){
-  //         ex.printStackTrace();}
-  //     
-
-
-
-
-      
-
-//try {
-//    Response<IpmaCityForecast> apiResponse = callSync.execute();
-//    IpmaCityForecast forecast = apiResponse.body();
-//
-//    if (forecast != null) {
-//        CityForecast firstDay = forecast.getData().listIterator().next();
-//        int ID = forecast.getGlobalIdLocal();
-//        String DATE = firstDay.getForecastDate();
-//        Double TMIN = Double.parseDouble(firstDay.getTMin());
-//        Double TMAX = Double.parseDouble(firstDay.getTMax());
-//        Double PPROB = Double.parseDouble(firstDay.getPrecipitaProb());}
-//
-//         
-//    }catch (Exception ex) {
-//    ex.printStackTrace();}
-//}}
+}
