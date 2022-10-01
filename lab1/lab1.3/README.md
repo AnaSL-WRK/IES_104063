@@ -4,10 +4,24 @@ Ana Loureiro, 104063, UA
 
 Useful tutorial: [Learn Git with Bitbucket Cloud](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 
+## Setting up Git
+
+Make sure that you have git installation available in the command line in your development machine.  
+To check use:
+
+ ```
+    git --version
+    git config --list
+```
+
+> If you do not get an output from git config including your name and email address, then follow this [tutorial](https://www.atlassian.com/git/tutorials/install-git) to get started.
+ 
+<br>
 
 ## Git basics: Creating a repo
  
  This step is pretty intuitive when using a hosting service like [GitHub](https://github.com) or [BitBucket](https://bitbucket.org), but refer to the tutorial if help is needed.
+ 
 <br>
 
 ## Adding a project to Git versioning
