@@ -79,7 +79,7 @@ Now you can access it from http://localhost:8080/webApp-1.0-SNAPSHOT/ (in my cas
 Deploying using the Tomcat Manager page has some disadvantages: it is not “connected” with the IDE and is specific to Tomcat.  
 The productive alternative is to use the IDE integrated deployment support. 
 
-In my case, VSCODE, you need to install <ins>Community Server Connectors</ins> extension by Red Hat.  
+In my case, VSCode, you need to install <ins>Community Server Connectors</ins> extension by Red Hat.  
 You would need to create a new server, by right clicking on the servers subsection now created and reference to the file you just downloaded, or use one automatically downloaded from the internet by the extension.
 
 > I usually do all my work in my University OneDrive, these labs included. In this case it would be impossible to deploy the server from my directory since the path to the Tomcat server in the JSON file would be  
@@ -87,7 +87,7 @@ You would need to create a new server, by right clicking on the servers subsecti
 > which includes the illegal expression "OneDrive **-** Universidade de Aveiro" making it impossible to deploy
 
 
-I will continue this project using the vscode extension and integrated download, making it easier and faster to deploy and reload
+I will continue this project using the VSCode extension and integrated download, making it easier and faster to deploy and reload
 
 > by going with the server extension and integrated download, you wont be able to access tha manager page, as tomcat-users.xml wont be editable
 
@@ -105,13 +105,10 @@ to access it : http://localhost:8080/webApp-1.0-SNAPSHOT/webServlet (for this pr
   
 > http://localhost:8080/ Name of war file /url pattern defined in .java
 
-Since for this project we need to pass a parameter for the page to work, adding ?username=name at the end of the url will make it work.
-  
- 
+</br>
 
-How to solve "Plugin execution not covered by lifecycle configuration" 
-add  <pluginManagement>
-depois de <build>
+Since for this project we need to pass a parameter for the page to work, adding ?username=name at the end of the url will make it work.
+ 
   
   
  ## Errors encountered
