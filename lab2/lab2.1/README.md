@@ -46,7 +46,7 @@ Restart the server and access the manager app (http://localhost:8080/manager)
 > And deploy and un-deploy applications you develop
 
 
-## Creating web application
+## Creating a web application
 
 We are now creating a web application and deploy it into Tomcat.  
 This is different from a standard Java application and requires some extra configuration, that can be obtained from a suitable archetype
