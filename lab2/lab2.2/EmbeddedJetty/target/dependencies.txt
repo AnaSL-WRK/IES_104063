@@ -1,0 +1,11 @@
+digraph "ua.ana:EmbeddedJetty:war:1.0-SNAPSHOT" { 
+	"ua.ana:EmbeddedJetty:war:1.0-SNAPSHOT" -> "junit:junit:jar:4.11:test" ; 
+	"ua.ana:EmbeddedJetty:war:1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-server:jar:9.2.15.v20160210:compile" ; 
+	"ua.ana:EmbeddedJetty:war:1.0-SNAPSHOT" -> "org.eclipse.jetty:jetty-servlet:jar:9.2.15.v20160210:compile" ; 
+	"junit:junit:jar:4.11:test" -> "org.hamcrest:hamcrest-core:jar:1.3:test" ; 
+	"org.eclipse.jetty:jetty-server:jar:9.2.15.v20160210:compile" -> "javax.servlet:javax.servlet-api:jar:3.1.0:compile" ; 
+	"org.eclipse.jetty:jetty-server:jar:9.2.15.v20160210:compile" -> "org.eclipse.jetty:jetty-http:jar:9.2.15.v20160210:compile" ; 
+	"org.eclipse.jetty:jetty-server:jar:9.2.15.v20160210:compile" -> "org.eclipse.jetty:jetty-io:jar:9.2.15.v20160210:compile" ; 
+	"org.eclipse.jetty:jetty-http:jar:9.2.15.v20160210:compile" -> "org.eclipse.jetty:jetty-util:jar:9.2.15.v20160210:compile" ; 
+	"org.eclipse.jetty:jetty-servlet:jar:9.2.15.v20160210:compile" -> "org.eclipse.jetty:jetty-security:jar:9.2.15.v20160210:compile" ; 
+ } 
