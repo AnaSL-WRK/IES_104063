@@ -1,0 +1,94 @@
+
+{ "info": [{        "id": 1,
+                    "show": "Arcane",
+                    "quotes": ["There's a monster inside all of us." 
+                            , "Nature has made us intolerant to change, but fortunately, we have the capacity to change our nature."
+                            , "A bit of advice. Don't threaten the guy who pours the drinks"
+                            , "All my life, I've pursued the mysteries of science, only to discover some are better left unsolved"
+                            , "The only way to defeat a superior enemy is to stop at nothing. To become what they fear."
+                            , "It's Jinx now. Powder fell down a well"
+                            , "You'd be surprised what you can pull off when your life depends on it"
+                            , "What is truth, but a survivor's story?"
+                            , "Loneliness is often the byproduct of a gifted mind."]},
+
+
+                    {"id": 2,
+                    "show": "Danganronpa",
+                    "quotes": ["I'm rather proud of my ability to tell lies. I can trick not only others, but even my own heart."
+                             , "Wherever there is hope, there is most definitely despair"
+                             , "No matter who the enemy may be, those who can't adapt will be the first to die"
+                             , "Every human has regrets, has things they'd like to go back and change. But I don't because I am a bear!"
+                             , "A lack of adaptability...is a lack of survivability. Survival is not based on who is the strongest or the smartest. It comes down to who can adapt"
+                             , "It doesn't matter how negative something is. Just add lol and it will automatically become positive."
+                             , "You know, isn't it said that life has its ups and downs? It's fun because downs come after ups, but if life was full of downs, wouldn't it get boring?"]},
+                            
+                    
+                    {"id": 3,
+                    "show": "Kiki's Delivery Service",
+                    "quotes": [ "Stop trying. Take long walks. Look at the scenery. Doze off at noon. Don't even think about flying. And then, pretty soon, you'll be flying again."
+                              , "Just follow your heart and keep smiling."
+                              , "Without even thinking about it, I used to be able to fly. Now I'm trying to look inside myself and find out how I did it."
+                              , "I think something's wrong with me. I make friends, then suddenly I can't bear to be with any of them. Seems like that other me, the cheerful and honest one, went away somewhere"]},
+                            
+                    {"id": 4,
+                    "show": "Kakegurui",
+                    "quotes": [ "I despise people who move the goalposts because they think they can't win."
+                              , "As they say, the less you know, the better you sleep."
+                              , "I dislike situations where I know for sure if I'm going to win or lose. Because it's not really gambling."
+                              , "They say humans are irrational creatures... gambling doesn't get them anything, they only lose something. But even so, we still gamble. We do that because we enjoy the risk."
+                              , "To make your ambitions come true, you have to take risks."]},
+
+                    {"id": 5,
+                    "show": "Shutter Island",
+                    "quotes": [ "You're Smarter Than You Look, Marshall. That's Probably Not A Good Thing."
+                             , "Crazy People - They're The Perfect Subjects. They Talk, Nobody Listens."
+                            , "Which would be worse? To live as a monster, or to die as a good man?"
+                            , "Sanity's not a choice, Marshall. You can't just choose to get over it."]},
+
+
+                    {"id": 6,
+                    "show": "Vincenzo",
+                    "quotes": [ "Smart people may rule the world, but reckless and stubborn people like me protect it."
+                              , "The only way to get rid of your anger is by fighting it. Stand your ground and fight back. Enlightenment is what you get when you win that battle."
+                              , "Friends are like two souls in one body. Don't get hurt since it will hurt me, too."
+                              , "A chance is reserved only for those who are worthy."]},
+
+
+                    
+                    {"id": 7,
+                    "show": "Se7en",
+                    "quotes": [ "Ernest Hemingway once wrote, 'The world is a fine place and worth fighting for.' I agree with the second part"
+                              , "If we catch John Doe and he turns out to be the devil, I mean if he's Satan himself, that might live up to our expectations, but he's not the devil. He's just a man."
+                              , "It's more comfortable for you to label me as insane."
+                              , "[answering phone that interrupted his conversation] This is not even my desk![hangs up]"
+                              , "People will barely be able to comprehend it, but they won't be able to deny it."
+                              , "Nothing wrong with a man taking pleasure in his work. I won't deny my own personal desire to turn each sin against the sinner."]},
+
+
+                    {"id": 8,
+                    "show": "Psycho-Pass",
+                    "quotes": [ "A perfect plan doesn't mean having everything go within expectations. A perfect plan is achieved when it has the plasticity needed to flexibly deal with troubles."
+                              , "I wonder what sort of criteria you use to divide people into good and evil."
+                              , "I think the only time people really have value is when they act according to their own will"
+                              , "As a leader, you need to learn from the mistakes of others, not your own"
+                              , "It is not society that determines people's futures. It is the people who determine society's future"
+                              , "When a man faces fear, his soul is tested. What he was born to seek… what he was born to achieve… his true nature will become clear"
+                              , "Isn't using the net just like using knives for cooking or using paper to write things down? It has nothing to do with good or bad. It's like, it's there, so we accept and use it"]},
+                                      
+                    
+                    {"id": 9,
+                    "show": "Shining",
+                    "quotes": [ "Here's Johnny!"
+                              , "All work and no play makes Jack a dull boy."
+                              , "Some places are like people: some shine and some don't."]}, 
+
+                    {"id": 10,
+                    "show": "Joker",
+                    "quotes": [ "I've Got Nothing Left To Lose. Nothing Can Hurt Me Anymore. My Life Is Nothing But A Comedy."
+                              , "When I Was A Little Boy And Told People I Was Going To Be A Comedian, Everyone Laughed At Me. Well, No One's Laughing Now."
+                              , "Comedy Is Subjective, Murray, Isn't That What They Say? All Of You, The System That Knows So Much: You Decide What's Right Or Wrong The Same Way You Decide What's Funny Or Not"
+                              , "The Worst Part Of Having A Mental Illness Is People Expect You To Behave As If You Don't."
+                              , "You Wouldn't Get It."]}
+                            
+             ]
+}
