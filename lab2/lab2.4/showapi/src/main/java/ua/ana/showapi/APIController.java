@@ -1,14 +1,18 @@
 package ua.ana.showapi;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,13 +24,12 @@ public class APIController {
     
 	@GetMapping("/api/quote")
 	  public rdmquote randomQuote() throws IOException, ParseException ,FileNotFoundException {
+
+         //gets json
         JSONParser jsonparser = new JSONParser();
-        
-        FileReader reader = new FileReader("C:\\Users\\anawk\\OneDrive - Universidade de Aveiro\\Uni\\3.ano\\IES\\IES_104063\\lab2\\lab2.4\\showapi\\src\\main\\java\\ua\\ana\\showapi\\API.json");
-  
-        //abrir o json pra object
-        Object obj = jsonparser.parse(reader);
-        JSONObject json = (JSONObject)obj;
+        InputStream resource = new ClassPathResource("API.json").getInputStream();
+        JSONObject json = (JSONObject)jsonparser.parse(new InputStreamReader(resource, "UTF-8"));
+
   
         //gets all arrays
         JSONArray array = (JSONArray)json.get("info");
@@ -60,12 +63,12 @@ public class APIController {
    
 @GetMapping("/api/shows")
   public JSONArray allShows() throws IOException, ParseException, FileNotFoundException {
-   JSONParser jsonparser = new JSONParser();
-   FileReader reader = new FileReader("C:\\Users\\anawk\\OneDrive - Universidade de Aveiro\\Uni\\3.ano\\IES\\IES_104063\\lab2\\lab2.4\\showapi\\src\\main\\java\\ua\\ana\\showapi\\API.json");
 
-   //abrir o json pra object
-   Object obj = jsonparser.parse(reader);
-   JSONObject json = (JSONObject)obj;
+   //gets json
+   JSONParser jsonparser = new JSONParser();
+   InputStream resource = new ClassPathResource("API.json").getInputStream();
+   JSONObject json = (JSONObject)jsonparser.parse(new InputStreamReader(resource, "UTF-8"));
+
 
    //gets all arrays
    JSONArray array = (JSONArray)json.get("info");
@@ -92,12 +95,12 @@ public class APIController {
 @GetMapping("/api/quotes")
   public rdmquote idQuote(@RequestParam(value = "show", required=true) Long inputId) throws IOException, ParseException, FileNotFoundException {
 
-   JSONParser jsonparser = new JSONParser();
-   FileReader reader = new FileReader("C:\\Users\\anawk\\OneDrive - Universidade de Aveiro\\Uni\\3.ano\\IES\\IES_104063\\lab2\\lab2.4\\showapi\\src\\main\\java\\ua\\ana\\showapi\\API.json");
+  //gets json
+  JSONParser jsonparser = new JSONParser();
+  InputStream resource = new ClassPathResource("API.json").getInputStream();
+  JSONObject json = (JSONObject)jsonparser.parse(new InputStreamReader(resource, "UTF-8"));
 
-   //abrir o json pra object
-   Object obj = jsonparser.parse(reader);
-   JSONObject json = (JSONObject)obj;
+
 
    //gets all arrays
    JSONArray array = (JSONArray)json.get("info");
