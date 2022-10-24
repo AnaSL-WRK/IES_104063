@@ -14,16 +14,16 @@ public class Employee {
 	private long id;
 	private String firstName;
 	private String lastName;
-	private String emailId;
+	private String email;
 	
 	public Employee() {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId) {
+	public Employee(String firstName, String lastName, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.emailId = emailId;
+		this.email= email;
 	}
 	
 	@Id
@@ -52,17 +52,18 @@ public class Employee {
 	}
 	
 	@Column(name = "email_address", nullable = false)
-	public String getEmailId() {
-		return emailId;
+	public String getEmail() {
+		return email;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ "]";
 	}
+
 	
 }

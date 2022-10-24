@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -35,6 +36,13 @@ public class EmployeeController {
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
 		return ResponseEntity.ok().body(employee);
 	}
+	
+	@GetMapping(value ="/employees", params = "email")
+	public ResponseEntity<Employee> getEmployeeByEmail(@RequestParam(value = "email") String email) throws ResourceNotFoundException
+			{
+				Employee employee = employeeRepository.findByEmail(email);
+				return ResponseEntity.ok().body(employee);
+			}
 
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
@@ -47,7 +55,7 @@ public class EmployeeController {
 		Employee employee = employeeRepository.findById(employeeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
 
-		employee.setEmailId(employeeDetails.getEmailId());
+		employee.setEmail(employeeDetails.getEmail());
 		employee.setLastName(employeeDetails.getLastName());
 		employee.setFirstName(employeeDetails.getFirstName());
 		final Employee updatedEmployee = employeeRepository.save(employee);
@@ -65,4 +73,6 @@ public class EmployeeController {
 		response.put("deleted", Boolean.TRUE);
 		return response;
 	}
+
+	
 }
