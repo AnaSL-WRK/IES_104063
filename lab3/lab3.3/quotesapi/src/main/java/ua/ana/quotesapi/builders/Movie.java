@@ -26,10 +26,7 @@ public class Movie {
    private Long year;
    private String genre;
    private String quote;
-   
-    public Movie orElse(Object object) {
-	return null;
+
 }
    
 
-}
