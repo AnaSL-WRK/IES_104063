@@ -31,7 +31,17 @@ You use it with ```@RestController```; therefore, the ```@ResponseBody``` isn't 
 ___
 
 **B)Create a visualization of the Spring Boot layers (UML diagram or similar), displaying the key abstractions in the solution of 3.3, in particular: entities, repositories, services and REST controllers. Describe the role of the elements modeled in the diagram.**
-See: [Lab 3.3 / UML_diagram.jpg](/lab3/lab3.3/UML_diagram.jpg)
+See: [Lab 3.3 / UML.png](/lab3/UML.png)
+
+- Domain Objects: Objects that represent the data in the application and what we manipulate throughout the code, hence being connected to all elements (except the database, directly).
+
+- @RestController: As explained in the previous question, it takes care of mapping request data (hence being connected to Domain Objects) to the defined request handler method (and so, being connected to @Service).
+
+- @Service: Holds all the business logic that is requested by the @RestController using the Domain Objects (having a bidirectional connection with the Objects) and using the @Repository, via @AutoWired (having a unidirectional connection with it).
+
+- @Repository: Provides the mechanism for storage, retrieval, search, update and delete operation on objects from the Database (hence the bidirectional connection). These mechanisms are used in @Service, and are done by manipulating the Domain Objects with these methods (hence having a unidirectional connection with them)
+
+- Database: Made up of a collection of tables, storing all the structured data manipulated throughout the application. It's information is manipulated by the @Repository, hence the bidirectional connection  to it.
 
 ___
 
