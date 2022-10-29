@@ -33,15 +33,15 @@ ___
 **B)Create a visualization of the Spring Boot layers (UML diagram or similar), displaying the key abstractions in the solution of 3.3, in particular: entities, repositories, services and REST controllers. Describe the role of the elements modeled in the diagram.**
 See: [Lab 3.3 / UML.png](/lab3/UML.png)
 
-- Domain Objects: Objects that represent the data in the application and what we manipulate throughout the code, hence being connected to all elements (except the database, directly).
+- <u>Domain Objects</u>: Objects that represent the data in the application and what we manipulate throughout the code, hence being **connected to all elements** (except the database, directly).
 
-- @RestController: As explained in the previous question, it takes care of mapping request data (hence being connected to Domain Objects) to the defined request handler method (and so, being connected to @Service).
+- <u>@RestController</u>: As explained in the previous question, it takes care of mapping request data (hence being **connected to <u>Domain Objects</u>**) to the defined request handler method (and so, **being connected to <u>@Service</u>**).
 
-- @Service: Holds all the business logic that is requested by the @RestController using the Domain Objects (having a bidirectional connection with the Objects) and using the @Repository, via @AutoWired (having a unidirectional connection with it).
+- <u>@Service</u>: Holds all the business logic that is requested by the <u>@RestController</u> using the <u>Domain Objects</u> (having a **bidirectional connection with the Objects**) and using the information from the <u>@Repository</u>, via <u>@AutoWired</u> (having a **unidirectional connection with it**).
 
-- @Repository: Provides the mechanism for storage, retrieval, search, update and delete operation on objects from the Database (hence the bidirectional connection). These mechanisms are used in @Service, and are done by manipulating the Domain Objects with these methods (hence having a unidirectional connection with them)
+- <u>@Repository</u>: Provides the mechanism for storage, retrieval, search, update and delete operation on objects from the <u>Database</u> (hence the**bidirectional connection**). These mechanisms are used in <u>@Service</u>, and are done by manipulating the <u>Domain Objects</u> with these methods (hence having a **unidirectional connection with them**)
 
-- Database: Made up of a collection of tables, storing all the structured data manipulated throughout the application. It's information is manipulated by the @Repository, hence the bidirectional connection  to it.
+- <u>Database</u>: Made up of a collection of tables, storing all the structured data manipulated throughout the application. It's information is manipulated by the <u>@Repository</u>, hence the **bidirectional connection to it**.
 
 ___
 
